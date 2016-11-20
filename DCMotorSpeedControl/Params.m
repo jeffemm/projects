@@ -70,5 +70,6 @@ L_winding = 30e-6;
 Vdc = 9.6;
 
 
-I_initial = I_nl; % No load at 9.6V
-Om_initial = Om_nl; % No load at 9.6V
+I_initial = I_nl;
+Om_initial = Om_nl;
+

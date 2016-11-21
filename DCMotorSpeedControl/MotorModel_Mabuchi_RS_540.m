@@ -20,7 +20,7 @@
 %   R = 9.6V/57.4A = 0.1672 Ohms
 %
 % No information on friction, rotational inertia, or inductance
-% SWAG for Kfr, KfrOffset, Im, Lm below given results that are no
+% SWAG for Kfg, Kfo, Im, Lm below given results that are no
 % ridiculous.
 %
 %  *For Lm from 10e-6 to 500e-6 only minor change in step response
@@ -63,13 +63,18 @@ R_winding = Vdc_nom/I_stall;
 Ki = (Tq_stall/I_stall); % Nm/A
 Kv = (Vdc_nom - (I_nl*R_winding))/Om_nl; % V/(rad/s)
 
-KfrOffset = 0.0001;
-Kfr = ((Ki*I_nl) - KfrOffset)/(Om_nl^2); %based on calculated no load I*Ki and Omega
+Kfo = 0.0001;
+Kfg = ((Ki*I_nl) - Kfo)/(Om_nl); %based on calculated no load I*Ki and Omega
 J_rotor = m_rotor * r_rotor^2/2;
 L_winding = 30e-6;
 Vdc = 9.6;
 
 
-I_initial = I_nl;
-Om_initial = Om_nl;
+if( 0 )
+    I_initial = I_nl;
+    Om_initial = Om_nl;
+else
+    I_initial = 0;
+    Om_initial = 0;
+end
 

@@ -1,5 +1,6 @@
 
 % Generate state space model for motor model
+%   - with linear coulomb and viscous friction
 %
 % J_rotor - inertia of the rotating part of the motor (kgm^2)
 % L_winidng - inductance of motor windings (Henries)

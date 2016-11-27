@@ -63,7 +63,8 @@ R_winding = Vdc_nom/I_stall;
 Ki = (Tq_stall/I_stall); % Nm/A
 Kv = (Vdc_nom - (I_nl*R_winding))/Om_nl; % V/(rad/s)
 
-Kfo = 0.0001;
+%Kfo = 0.0001;
+Kfo = 0.0000;
 Kfg = ((Ki*I_nl) - Kfo)/(Om_nl); %based on calculated no load I*Ki and Omega
 J_rotor = m_rotor * r_rotor^2/2;
 L_winding = 30e-6;

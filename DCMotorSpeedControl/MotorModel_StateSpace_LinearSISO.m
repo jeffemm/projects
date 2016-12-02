@@ -44,15 +44,21 @@ sys_mtr = ss(A_mtr, B_mtr, C_mtr, D_mtr, ...
 H_mtr = tf(sys_mtr);
 
 
-figure;
-step_opts = stepDataOptions('StepAmplitude', 9.6);
-stepplot(H_mtr, step_opts);
+if( 0 )
+    figure;
+    step_opts = stepDataOptions('StepAmplitude', 9.6);
+    stepplot(H_mtr, step_opts);
+end
 
 
-figure;
-bodeplot(sys_mtr);
+if( 0 )
+    figure;
+    bodeplot(sys_mtr);
+end
 
-figure;
-pzplot(H_mtr);
+if( 0 )
+    figure;
+    pzplot(H_mtr);
+end
 
 

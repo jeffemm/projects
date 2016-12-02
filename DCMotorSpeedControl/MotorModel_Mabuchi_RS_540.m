@@ -71,7 +71,7 @@ L_winding = 30e-6;
 Vdc = 9.6;
 
 
-if( 1 )
+if( 0 )
     I_initial = I_nl;
     Om_initial = Om_nl;
 else
